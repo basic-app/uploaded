@@ -7,6 +7,7 @@
         }
     },
     "require": {
-        "basic-app/storage": "*"
+        "basic-app/storage": "*",
+        "webmozart/assert": "*"
     }
 }
