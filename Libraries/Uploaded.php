@@ -13,4 +13,20 @@ class Uploaded extends \BasicApp\Storage\Libraries\BaseStorage
 
     public $configName = UploadedConfig::class;
 
+    public function url(?string $url) : string
+    {
+        $config = config($this->configName);
+
+        Assert::notEmpty($config, 'Config not found: ' . $this->configName);
+
+        $return = $config->basePath;
+
+        if ($url)
+        {
+            $return .= '/' . $url;
+        }
+
+        base_url($return);
+    }
+
 }
