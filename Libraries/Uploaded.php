@@ -6,12 +6,18 @@
  */
 namespace BasicApp\Uploaded\Libraries;
 
+use Webmozart\Assert\Assert;
 use BasicApp\Uploaded\Config\Uploaded as UploadedConfig;
 
 class Uploaded extends \BasicApp\Storage\Libraries\BaseStorage
 {
 
     public $configName = UploadedConfig::class;
+
+    public function getBasePath() : string
+    {
+        return FCPATH;
+    }
 
     public function url(?string $url) : string
     {
@@ -28,5 +34,6 @@ class Uploaded extends \BasicApp\Storage\Libraries\BaseStorage
 
         base_url($return);
     }
+
 
 }
