@@ -8,7 +8,7 @@ namespace BasicApp\Uploaded\Libraries;
 
 use BasicApp\Uploaded\Config\Uploaded as UploadedConfig;
 
-class Uploaded extends \BasicApp\Storage\Libraries\Storage
+class Uploaded extends \BasicApp\Storage\Libraries\BaseStorage
 {
 
     public $configName = UploadedConfig::class;
