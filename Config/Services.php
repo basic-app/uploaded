@@ -20,7 +20,7 @@ class Services extends \CodeIgniter\Config\BaseService
 
         $config = config(Uploaded::class);
 
-        Assert::notEmpty($config, 'Config not found.');
+        Assert::notEmpty($config, 'Config not found: ' . Uploaded::class);
 
         $path = FCPATH . $config->basePath;
 
