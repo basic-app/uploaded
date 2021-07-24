@@ -32,8 +32,7 @@ class Uploaded extends \BasicApp\Storage\Libraries\BaseStorage
             $return .= '/' . $url;
         }
 
-        base_url($return);
+        return base_url($return);
     }
-
 
 }
